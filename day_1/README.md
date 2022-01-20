@@ -38,7 +38,7 @@ k expose deployment nginx --type=NodePort
 
 ## Limitando recursos
 
-<!-- TODO: Procurar aqui referência sobre formato de cpu/memória -->
+[Unidades de CPU e Memória que o k8s utiliza](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#resource-units-in-kubernetes)
 
 
 Estressando a aplicação. Após um exce -it no pod, instalar o app stress:
