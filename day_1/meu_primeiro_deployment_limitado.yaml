@@ -5,17 +5,10 @@ metadata:
   labels:
     app: nginx
 spec:
-  progressDeadlineSeconds: 600
-  replicas: 1
-  revisionHistoryLimit: 10
+  replicas: 10
   selector:
     matchLabels:
       run: nginx
-  strategy:
-    rollingUpdate:
-      maxSurge: 25%
-      maxUnavailable: 25%
-    type: RollingUpdate
   template:
     metadata:
       labels:
@@ -27,3 +20,12 @@ spec:
         name: nginx
         ports:
         - containerPort: 80
+        resources: 
+          limits:
+            memory: 512Mi
+            cpu: "500m"
+          requests:
+            memory: 256Mi
+            cpu: "250m"
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
