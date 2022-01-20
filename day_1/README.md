@@ -35,3 +35,31 @@ k expose deployment nginx --type=NodePort
 > Range de portas do NodePort do svc: 30k at[e 32k]
 
 > Múltiplos yamls podem ficar em umúnico arquivo separadando os yamls por 3 hífens: `---`
+
+## Limitando recursos
+
+<!-- TODO: Procurar aqui referência sobre formato de cpu/memória -->
+
+
+Estressando a aplicação. Após um exce -it no pod, instalar o app stress:
+```
+apt-get update && apt-get install -y stress
+```
+
+estressar o pod:
+
+```
+stress --vm 1 --vm-bytes 505M 
+```
+
+
+### Taint
+```
+kubectl taint node <NODE_NAME> key1=value1:NoSchedule
+```
+
+ou para todos os nós
+
+```
+kubectl taint nodes --all <NODE_NAME> key1=value1:NoSchedule
+```
