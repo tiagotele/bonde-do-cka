@@ -2,7 +2,7 @@
 
 ## Subindo Minikube
 ```bash
-minikube start --profile bonde-do-cka --kubernetes-version 1.22.2  --driver=docker
+minikube start --profile bonde-do-cka --kubernetes-version 1.22.2  --driver=docker --nodes 3
 ```
 
 
