@@ -58,6 +58,13 @@ stress --vm 1 --vm-bytes 505M
 kubectl taint node <NODE_NAME> key1=value1:NoSchedule
 ```
 
+Para desfazer:
+
+```
+kubectl taint nodes bonde-do-cka key1:NoSchedule-
+```
+
+
 ou para todos os nós
 
 ```
