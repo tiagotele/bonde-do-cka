@@ -29,3 +29,9 @@ k label nodes bonde-do-cka-m02  --list
 
 Remover label de todos os nós   
 k label nodes dc- --all
+
+## ReplicaSet
+
+## DeamonSet
+Igual ao ReplicaSet mas sem número de réplicas. Usado quando se quer que a aplicação fique em todos os nós do cluster.
+
