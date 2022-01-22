@@ -39,3 +39,15 @@ k rollout history ds  <NAME>
 k rollout history ds <NAME> --revision <REVISION_NUMBER>
 k rollout undo ds <NAME> --to-revision <REVISION_NUMBER>
 ```
+
+
+### Canary Deployment
+
+```
+k create -f day_3/app-v1.yml
+k create -f day_3/service-app.yml
+k create -f day_3/app-v2-canary.yml
+k apply -f day_3/app-v2.yml
+k rollout history deployment giropops-v2
+```
+
