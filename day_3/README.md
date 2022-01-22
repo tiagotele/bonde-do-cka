@@ -34,4 +34,8 @@ k label nodes dc- --all
 
 ## DeamonSet
 Igual ao ReplicaSet mas sem número de réplicas. Usado quando se quer que a aplicação fique em todos os nós do cluster.
-
+```
+k rollout history ds  <NAME>
+k rollout history ds <NAME> --revision <REVISION_NUMBER>
+k rollout undo ds <NAME> --to-revision <REVISION_NUMBER>
+```
