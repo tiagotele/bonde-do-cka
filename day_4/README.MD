@@ -20,3 +20,23 @@ k get pods
 k logs <POD_NAME>
 k logs <POD_NAME>
 k describe pod <POD_NAME>
+
+## Secrets
+```
+echo -n "giropops strigus girus" > secret.txt
+cat secret.txt
+k get secrets
+k create secret generic my-secret --from-file secret.txt
+k get secrets
+k describe secret my-secret
+k get secrets my-secret -o yaml
+
+k create -f test-secret.yaml
+k describe pod test-secret
+k exec -it test-secret sh
+
+k create secret generic my-literal-secret --from-literal user=linuxtips --from-literal password=catota
+
+k create -f test-secret-env.yaml
+k exec -it teste-secret-env sh
+```
