@@ -40,3 +40,7 @@ k create secret generic my-literal-secret --from-literal user=linuxtips --from-l
 k create -f test-secret-env.yaml
 k exec -it teste-secret-env sh
 ```
+
+
+## Configmap
+
