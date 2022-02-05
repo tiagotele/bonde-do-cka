@@ -43,4 +43,14 @@ k exec -it teste-secret-env sh
 
 
 ## Configmap
-
+```
+mkdir frutas
+echo amarela > frutas/banana
+echo vermelho > frutas/morango
+echo verde > frutas/limao
+echo "verde e vermelha" > frutas/melancia
+echo kiwi > predileta
+git clone https://bitbucket.org/gcalcette/book-descomplicando-k8s.git
+kubectl create configmap cores-frutas --from-literal=uva=roxa --from-file=predileta --from-file=frutas/
+kubectl get configmap
+```
