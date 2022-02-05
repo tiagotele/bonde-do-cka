@@ -54,3 +54,10 @@ git clone https://bitbucket.org/gcalcette/book-descomplicando-k8s.git
 kubectl create configmap cores-frutas --from-literal=uva=roxa --from-file=predileta --from-file=frutas/
 kubectl get configmap
 ```
+
+## InitContainers
+```
+kubectl create -f nginx-initcontainer.yaml
+kubectl exec -ti init-demo -- cat /usr/share/nginx/html/index.html
+kubectl describe pod init-demo
+```
