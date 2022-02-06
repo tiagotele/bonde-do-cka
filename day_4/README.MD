@@ -61,3 +61,17 @@ kubectl create -f nginx-initcontainer.yaml
 kubectl exec -ti init-demo -- cat /usr/share/nginx/html/index.html
 kubectl describe pod init-demo
 ```
+## ServiceAccount, ClusterRole, ClusterRoleBindings
+Creating service account on cli mode and binding it to cluster-admin
+```
+k create serviceaccount tiago
+k create clusterrolebinding toskeria --serviceaccount=default:tiago
+k create clusterrolebinding toskeria --serviceaccount=default:tiago --clusterrole=cluster-admin
+```
+
+Creating service account and clusterrolebindings form files
+```
+k create -f admin-user.yaml
+k create -f admin-cluster-role-binding.yaml
+k get clusterrolebindings
+```
