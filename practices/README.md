@@ -34,4 +34,8 @@ k label node bonde-do-cka-m03 description=node-b
 ```
 k create -f nginx-deployment.yaml
 ```
+
 6 Create a prometheus DaemonSet to run on all pods.
+```
+k create -f daemonset.yaml
+```

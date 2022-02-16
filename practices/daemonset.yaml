@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: prometheus
+  labels:
+    k8s-app: prometheus
+spec:
+  selector:
+    matchLabels:
+      name: prometheus
+    template:
+      labels:
+        name: prometheus
+spec:
+  selector:
+    matchLabels:
+      name: prometheus
+  template:
+    metadata:
+      labels:
+        name: prometheus
+    spec:
+      containers:
+      - name: prometheus
+        image: prom/prometheus
+
