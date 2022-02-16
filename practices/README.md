@@ -39,3 +39,9 @@ k create -f nginx-deployment.yaml
 ```
 k create -f daemonset.yaml
 ```
+
+7 Create a pvc, pv and nginx with this volumes attached.
+
+8 Create secret from file with content `name=prometheus-configmap`. Create Deployment with environment variable with content of this secret.
+
+9 Create configmap from file with content `name=prometheus-env`. Create Deployment with environment variable with content of this secret.
